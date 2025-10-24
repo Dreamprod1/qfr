@@ -1,0 +1,26 @@
+# Qmat Generator Requirements
+# Core dependencies for food colorant formulation system
+
+# Data processing
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine learning & AI
+torch>=2.0.0
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Optional: Quantum enhancement
+pennylane>=0.28.0
+pennylane-qiskit>=0.28.0
+
+# Development
+pytest>=7.0.0
+black>=22.0.0
+mypy>=0.950
+
+# Note: Make sure full_demo.py (QLPCGN model) is in the same directory
+# or in your Python path for full functionality
