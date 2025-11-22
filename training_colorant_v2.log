@@ -1,0 +1,47 @@
+2025-10-24 14:37:14,470 - INFO - ======================================================================
+2025-10-24 14:37:14,470 - INFO - 🎨 NATURAL COLORANT FORMULATION MODEL - V2
+2025-10-24 14:37:14,470 - INFO - Training on Expanded Dataset (~200+ samples)
+2025-10-24 14:37:14,470 - INFO - ======================================================================
+2025-10-24 14:37:14,470 - INFO - 
+======================================================================
+2025-10-24 14:37:14,471 - INFO - STEP 1: LOAD DATA FROM GCS
+2025-10-24 14:37:14,471 - INFO - ======================================================================
+2025-10-24 14:37:14,479 - INFO - ✅ Connected to GCS: gs://eurofins/
+2025-10-24 14:37:14,479 - INFO - 📥 Loading combined dataset from GCS...
+2025-10-24 14:37:14,715 - INFO - ✅ Loaded combined data: 177 samples
+2025-10-24 14:37:14,715 - INFO -    Columns: ['CID', 'MolecularFormula', 'MolecularWeight', 'ConnectivitySMILES', 'IUPACName', 'XLogP', 'TPSA', 'Complexity', 'HBondDonorCount', 'HBondAcceptorCount', 'RotatableBondCount', 'HeavyAtomCount', 'pubchem_url', 'colorant_name', 'source', 'pH_stability_3', 'pH_stability_5', 'pH_stability_7', 'k_4C', 'k_25C', 'k_40C', 'light_stability', 'oxygen_sensitivity', 'dataset_source', 'degradation_k', 'activation_energy', 'pH', 'temperature_C', 'light_stability_score', 'oxygen_sensitivity_score']
+2025-10-24 14:37:14,715 - INFO - 
+======================================================================
+2025-10-24 14:37:14,716 - INFO - STEP 2: PROCESS DATA
+2025-10-24 14:37:14,716 - INFO - ======================================================================
+2025-10-24 14:37:14,716 - INFO - ======================================================================
+2025-10-24 14:37:14,716 - INFO - 🔧 PROCESSING EXPANDED DATASET
+2025-10-24 14:37:14,716 - INFO - ======================================================================
+2025-10-24 14:37:14,716 - INFO - 
+🔍 Identifying features...
+2025-10-24 14:37:14,716 - INFO -   ✅ Found 16 numeric features
+2025-10-24 14:37:14,716 - INFO -   ✅ Found 1 categorical features
+2025-10-24 14:37:14,717 - INFO - 
+🔧 Extracting features...
+2025-10-24 14:37:14,719 - INFO -   ✅ Numeric features: (177, 16)
+2025-10-24 14:37:14,720 - INFO -   ✅ Categorical features encoded
+2025-10-24 14:37:14,721 - INFO -   ✅ Final feature shape: (177, 256)
+2025-10-24 14:37:14,722 - INFO - 
+⚖️  Creating sample weights...
+2025-10-24 14:37:14,722 - INFO -   pubchem_extended: 36 samples, weight=3.0
+2025-10-24 14:37:14,723 - INFO -   literature_extended: 11 samples, weight=2.5
+2025-10-24 14:37:14,723 - INFO -   synthetic_interpolated: 50 samples, weight=1.5
+2025-10-24 14:37:14,723 - INFO -   synthetic_perturbed: 50 samples, weight=1.2
+2025-10-24 14:37:14,724 - INFO -   synthetic_distribution: 30 samples, weight=1.0
+2025-10-24 14:37:14,724 - INFO - ======================================================================
+2025-10-24 14:37:14,724 - INFO - ✅ PROCESSED DATA SUMMARY
+2025-10-24 14:37:14,724 - INFO - ======================================================================
+2025-10-24 14:37:14,724 - INFO -   Total samples: 177
+2025-10-24 14:37:14,724 - INFO -   Feature dimension: 256
+2025-10-24 14:37:14,725 - INFO -   Number of colorant classes: 175
+2025-10-24 14:37:14,731 - INFO -   Data sources: {'synthetic_interpolated': 50, 'synthetic_perturbed': 50, 'pubchem_extended': 36, 'synthetic_distribution': 30, 'literature_extended': 11}
+2025-10-24 14:37:14,732 - INFO - ======================================================================
+2025-10-24 14:37:14,732 - INFO - 
+======================================================================
+2025-10-24 14:37:14,732 - INFO - STEP 3: SPLIT DATA
+2025-10-24 14:37:14,732 - INFO - ======================================================================

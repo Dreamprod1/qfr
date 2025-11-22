@@ -1,0 +1,125 @@
+2025-10-24 15:18:37,214 - INFO - ======================================================================
+2025-10-24 15:18:37,214 - INFO - 🎨 COLORANT MODEL - REGRESSION VERSION
+2025-10-24 15:18:37,214 - INFO - Predicting colorant properties (not classification)
+2025-10-24 15:18:37,214 - INFO - ======================================================================
+2025-10-24 15:18:37,221 - INFO - ✅ Connected to GCS: gs://eurofins/
+2025-10-24 15:18:37,221 - INFO - 📥 Loading combined dataset from GCS...
+2025-10-24 15:18:37,427 - INFO - ✅ Loaded combined data: 177 samples
+2025-10-24 15:18:37,427 - INFO - ======================================================================
+2025-10-24 15:18:37,427 - INFO - 🔧 PROCESSING DATA FOR REGRESSION
+2025-10-24 15:18:37,427 - INFO - ======================================================================
+2025-10-24 15:18:37,427 - INFO - 
+🔧 Extracting input features...
+2025-10-24 15:18:37,430 - INFO -   ✅ Numeric features: 8
+2025-10-24 15:18:37,431 - INFO -   ✅ Encoded data sources
+2025-10-24 15:18:37,431 - INFO -   ✅ Final input shape: (177, 256)
+2025-10-24 15:18:37,432 - INFO - 
+🎯 Extracting target properties...
+2025-10-24 15:18:37,433 - INFO -   ✅ Target properties: ['pH_stability_3', 'pH_stability_5', 'pH_stability_7', 'k_4C', 'light_stability', 'oxygen_sensitivity', 'MolecularWeight', 'Complexity']
+2025-10-24 15:18:37,433 - INFO -   ✅ Target shape: (177, 8)
+2025-10-24 15:18:37,434 - INFO - ======================================================================
+2025-10-24 15:18:37,434 - INFO - ✅ PROCESSED DATA SUMMARY
+2025-10-24 15:18:37,434 - INFO - ======================================================================
+2025-10-24 15:18:37,434 - INFO -   Total samples: 177
+2025-10-24 15:18:37,434 - INFO -   Input dimension: 256
+2025-10-24 15:18:37,434 - INFO -   Output dimension: 8
+2025-10-24 15:18:37,434 - INFO -   Data sources: {'synthetic_interpolated': 50, 'synthetic_perturbed': 50, 'pubchem_extended': 36, 'synthetic_distribution': 30, 'literature_extended': 11}
+2025-10-24 15:18:37,435 - INFO - ======================================================================
+2025-10-24 15:18:37,435 - INFO - 
+  Train: 141 samples
+2025-10-24 15:18:37,435 - INFO -   Val:   36 samples
+2025-10-24 15:18:37,438 - INFO - ======================================================================
+2025-10-24 15:18:37,439 - INFO - 🚀 STARTING REGRESSION TRAINING
+2025-10-24 15:18:37,439 - INFO - ======================================================================
+2025-10-24 15:18:37,441 - INFO -   📊 Model parameters: 43,944
+2025-10-24 15:18:37,625 - INFO -   Model: 43,944 parameters
+2025-10-24 15:18:37,626 - INFO -   Device: cuda
+2025-10-24 15:18:39,174 - INFO -   💾 Saved best model (val_loss=1.2170)
+2025-10-24 15:18:39,192 - INFO -   💾 Saved best model (val_loss=1.2083)
+2025-10-24 15:18:39,209 - INFO -   💾 Saved best model (val_loss=1.1982)
+2025-10-24 15:18:39,225 - INFO -   💾 Saved best model (val_loss=1.1833)
+2025-10-24 15:18:39,244 - INFO -   💾 Saved best model (val_loss=1.1562)
+2025-10-24 15:18:39,261 - INFO -   💾 Saved best model (val_loss=1.1301)
+2025-10-24 15:18:39,276 - INFO -   💾 Saved best model (val_loss=1.1019)
+2025-10-24 15:18:39,295 - INFO -   💾 Saved best model (val_loss=1.0690)
+2025-10-24 15:18:39,310 - INFO -   💾 Saved best model (val_loss=1.0400)
+2025-10-24 15:18:39,323 - INFO - Epoch  10/200 | Train Loss: 0.7258 | Val Loss: 1.0039 | LR: 1.00e-03
+2025-10-24 15:18:39,326 - INFO -   💾 Saved best model (val_loss=1.0039)
+2025-10-24 15:18:39,344 - INFO -   💾 Saved best model (val_loss=0.9332)
+2025-10-24 15:18:39,359 - INFO -   💾 Saved best model (val_loss=0.8619)
+2025-10-24 15:18:39,374 - INFO -   💾 Saved best model (val_loss=0.7991)
+2025-10-24 15:18:39,390 - INFO -   💾 Saved best model (val_loss=0.7388)
+2025-10-24 15:18:39,405 - INFO -   💾 Saved best model (val_loss=0.6781)
+2025-10-24 15:18:39,420 - INFO -   💾 Saved best model (val_loss=0.6314)
+2025-10-24 15:18:39,438 - INFO -   💾 Saved best model (val_loss=0.6064)
+2025-10-24 15:18:39,453 - INFO -   💾 Saved best model (val_loss=0.5777)
+2025-10-24 15:18:39,469 - INFO -   💾 Saved best model (val_loss=0.5585)
+2025-10-24 15:18:39,483 - INFO - Epoch  20/200 | Train Loss: 0.5449 | Val Loss: 0.5383 | LR: 5.01e-04
+2025-10-24 15:18:39,486 - INFO -   💾 Saved best model (val_loss=0.5383)
+2025-10-24 15:18:39,504 - INFO -   💾 Saved best model (val_loss=0.5302)
+2025-10-24 15:18:39,521 - INFO -   💾 Saved best model (val_loss=0.5158)
+2025-10-24 15:18:39,538 - INFO -   💾 Saved best model (val_loss=0.5030)
+2025-10-24 15:18:39,566 - INFO -   💾 Saved best model (val_loss=0.5005)
+2025-10-24 15:18:39,582 - INFO -   💾 Saved best model (val_loss=0.5005)
+2025-10-24 15:18:39,638 - INFO - Epoch  30/200 | Train Loss: 0.6083 | Val Loss: 0.5195 | LR: 1.00e-03
+2025-10-24 15:18:39,669 - INFO -   💾 Saved best model (val_loss=0.4936)
+2025-10-24 15:18:39,685 - INFO -   💾 Saved best model (val_loss=0.4843)
+2025-10-24 15:18:39,700 - INFO -   💾 Saved best model (val_loss=0.4612)
+2025-10-24 15:18:39,742 - INFO -   💾 Saved best model (val_loss=0.4555)
+2025-10-24 15:18:39,757 - INFO -   💾 Saved best model (val_loss=0.4379)
+2025-10-24 15:18:39,774 - INFO -   💾 Saved best model (val_loss=0.4366)
+2025-10-24 15:18:39,787 - INFO - Epoch  40/200 | Train Loss: 0.5222 | Val Loss: 0.4184 | LR: 8.54e-04
+2025-10-24 15:18:39,790 - INFO -   💾 Saved best model (val_loss=0.4184)
+2025-10-24 15:18:39,808 - INFO -   💾 Saved best model (val_loss=0.4125)
+2025-10-24 15:18:39,824 - INFO -   💾 Saved best model (val_loss=0.4064)
+2025-10-24 15:18:39,852 - INFO -   💾 Saved best model (val_loss=0.4020)
+2025-10-24 15:18:39,867 - INFO -   💾 Saved best model (val_loss=0.4017)
+2025-10-24 15:18:39,883 - INFO -   💾 Saved best model (val_loss=0.3979)
+2025-10-24 15:18:39,899 - INFO -   💾 Saved best model (val_loss=0.3976)
+2025-10-24 15:18:39,915 - INFO -   💾 Saved best model (val_loss=0.3895)
+2025-10-24 15:18:39,930 - INFO -   💾 Saved best model (val_loss=0.3824)
+2025-10-24 15:18:39,943 - INFO - Epoch  50/200 | Train Loss: 0.4337 | Val Loss: 0.3785 | LR: 5.01e-04
+2025-10-24 15:18:39,946 - INFO -   💾 Saved best model (val_loss=0.3785)
+2025-10-24 15:18:39,966 - INFO -   💾 Saved best model (val_loss=0.3773)
+2025-10-24 15:18:40,031 - INFO -   💾 Saved best model (val_loss=0.3761)
+2025-10-24 15:18:40,080 - INFO - Epoch  60/200 | Train Loss: 0.4726 | Val Loss: 0.3805 | LR: 1.47e-04
+2025-10-24 15:18:40,186 - INFO -   💾 Saved best model (val_loss=0.3755)
+2025-10-24 15:18:40,202 - INFO -   💾 Saved best model (val_loss=0.3751)
+2025-10-24 15:18:40,216 - INFO - Epoch  70/200 | Train Loss: 0.4246 | Val Loss: 0.3714 | LR: 1.00e-03
+2025-10-24 15:18:40,219 - INFO -   💾 Saved best model (val_loss=0.3714)
+2025-10-24 15:18:40,238 - INFO -   💾 Saved best model (val_loss=0.3680)
+2025-10-24 15:18:40,280 - INFO -   💾 Saved best model (val_loss=0.3668)
+2025-10-24 15:18:40,296 - INFO -   💾 Saved best model (val_loss=0.3658)
+2025-10-24 15:18:40,312 - INFO -   💾 Saved best model (val_loss=0.3650)
+2025-10-24 15:18:40,362 - INFO - Epoch  80/200 | Train Loss: 0.4095 | Val Loss: 0.3637 | LR: 9.62e-04
+2025-10-24 15:18:40,365 - INFO -   💾 Saved best model (val_loss=0.3637)
+2025-10-24 15:18:40,385 - INFO -   💾 Saved best model (val_loss=0.3621)
+2025-10-24 15:18:40,401 - INFO -   💾 Saved best model (val_loss=0.3619)
+2025-10-24 15:18:40,418 - INFO -   💾 Saved best model (val_loss=0.3566)
+2025-10-24 15:18:40,435 - INFO -   💾 Saved best model (val_loss=0.3562)
+2025-10-24 15:18:40,478 - INFO -   💾 Saved best model (val_loss=0.3550)
+2025-10-24 15:18:40,495 - INFO -   💾 Saved best model (val_loss=0.3506)
+2025-10-24 15:18:40,522 - INFO - Epoch  90/200 | Train Loss: 0.3874 | Val Loss: 0.3583 | LR: 8.54e-04
+2025-10-24 15:18:40,569 - INFO -   💾 Saved best model (val_loss=0.3502)
+2025-10-24 15:18:40,586 - INFO -   💾 Saved best model (val_loss=0.3475)
+2025-10-24 15:18:40,618 - INFO -   💾 Saved best model (val_loss=0.3442)
+2025-10-24 15:18:40,673 - INFO - Epoch 100/200 | Train Loss: 0.4782 | Val Loss: 0.3583 | LR: 6.92e-04
+2025-10-24 15:18:40,775 - INFO -   💾 Saved best model (val_loss=0.3419)
+2025-10-24 15:18:40,791 - INFO -   💾 Saved best model (val_loss=0.3377)
+2025-10-24 15:18:40,816 - INFO - Epoch 110/200 | Train Loss: 0.3119 | Val Loss: 0.3413 | LR: 5.01e-04
+2025-10-24 15:18:40,909 - INFO -   💾 Saved best model (val_loss=0.3367)
+2025-10-24 15:18:40,925 - INFO -   💾 Saved best model (val_loss=0.3326)
+2025-10-24 15:18:40,950 - INFO - Epoch 120/200 | Train Loss: 0.3899 | Val Loss: 0.3343 | LR: 3.09e-04
+2025-10-24 15:18:41,077 - INFO - Epoch 130/200 | Train Loss: 0.3788 | Val Loss: 0.3413 | LR: 1.47e-04
+2025-10-24 15:18:41,213 - INFO - Epoch 140/200 | Train Loss: 0.4035 | Val Loss: 0.3461 | LR: 3.90e-05
+2025-10-24 15:18:41,254 - INFO -   ⏹️  Early stopping at epoch 143
+2025-10-24 15:18:41,536 - INFO -   📊 Saved training curves to outputs_colorant_v2_regression/training_curves.png
+2025-10-24 15:18:41,536 - INFO - ======================================================================
+2025-10-24 15:18:41,536 - INFO - ✅ TRAINING COMPLETE
+2025-10-24 15:18:41,536 - INFO -   Best validation loss: 0.3326
+2025-10-24 15:18:41,536 - INFO - ======================================================================
+2025-10-24 15:18:41,536 - INFO - 
+📤 Uploading to GCS...
+2025-10-24 15:18:41,807 - INFO -   ☁️  Uploaded model
+2025-10-24 15:18:41,807 - INFO - 
+✅ COMPLETE!
